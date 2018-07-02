@@ -1,5 +1,8 @@
 ## 演示
 ![](https://wx4.sinaimg.cn/mw690/ec4d7780ly1fsvyopp7qig207v0dw1l5.gif)
+- 如果未正常显示gif，[点击链接](https://wx4.sinaimg.cn/mw690/ec4d7780ly1fsvyopp7qig207v0dw1l5.gif) 查看
+
+## 功能介绍
 
 1. 滚动到视频一半的位置，进行切换视频播放
 2. 记录所有视频的播放位置，再次切换回来的时候继续播放。
