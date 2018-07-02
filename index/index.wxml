@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="video-card" id="video{{index}}" wx:for="{{videoList}}" wx:key="*this">
+    <view class="video-box" style="height: {{item.styleHight}}px;">
+      <video 
+        wx:if="{{item.isPlay}}" 
+        src="{{item.src}}" 
+        class="video-video"
+        initial-time="{{item.currentTime}}"
+        controls="{{!false}}"
+        autoplay="{{true}}"
+        loop="{{true}}"
+        bindtimeupdate="eventPlayupdate"
+        bindfullscreenchange="eventFullScreen"
+        data-index="{{index}}"
+        >
+      </video>
+      <image wx:if="{{!item.isPlay}}" class="video-cover" mode="aspectFill" src="{{item.cover}}" bindtap="eventPlay" data-index="{{index}}"></image>
+    </view>
+    <view class="video-info">
+      <view class="video-title">{{item.title}}</view>
+      <view class="video-more">
+        <view class="support-share">
+          <text class="support-number">111暴晒值</text>
+          <view class="y-split"></view>
+          <text class="share-number">111人转发</text>
+        </view>
+        <button class="support-ta" bindtap="eventSupportTA" data-index="{{index}}">支持Ta</button>
+        <view class="longline"></view>
+        <button class="support-button" bindtap="eventShare" data-index="{{index}}">
+          <view class="support-text">邀请朋友一起帮TA曝晒</view>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>
